@@ -1,0 +1,142 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: #f0f4f8;
+    color: #333;
+}
+
+.header {
+    background-color: #4BA1BB;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout-btn {
+    background: #337ab7;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background: #286090;
+}
+
+.main-container {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+}
+
+.calendar-section, .agendamento-lista {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.dia {
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+.dia:hover {
+    background-color: #d0e7f9;
+}
+
+.dia.agendado {
+    background-color: #4BA1BB;
+    color: white;
+}
+
+.dia.selecionado {
+    border: 2px solid #004080;
+}
+
+#listaAgendamentos {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#listaAgendamentos li {
+    padding: 10px;
+    background: #f5f9fc;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.btn {
+    background-color: #4BA1BB;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3a8bb3;
+}
+
+.btn-cancel {
+    background-color: #bbb;
+    margin-left: 10px;
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
